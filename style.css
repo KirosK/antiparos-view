@@ -53,6 +53,7 @@ body {
   background: var(--white);
   line-height: 1.7;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -319,6 +320,10 @@ h1, h2, h3, h4 {
   display: block;
 }
 
+.lang-label {
+  display: none;
+}
+
 .lang-btn.active {
   opacity: 1;
   border-color: rgba(255, 255, 255, 0.5);
@@ -332,6 +337,18 @@ h1, h2, h3, h4 {
 .navbar.scrolled .lang-btn.active {
   border-color: var(--aegean);
   background: var(--aegean-pale);
+}
+
+.nav-lang-mobile {
+  display: none;
+}
+
+.lang-switcher-desktop {
+  display: flex;
+}
+
+.lang-switcher-mobile {
+  display: none;
 }
 
 /* Mobile nav toggle */
@@ -1747,11 +1764,30 @@ span.flatpickr-weekday {
 
 @media (max-width: 768px) {
   .section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
+  }
+
+  .section-tag {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .nav-toggle {
     display: flex;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
   }
 
   .nav-links {
@@ -1761,13 +1797,16 @@ span.flatpickr-weekday {
     width: 80%;
     max-width: 320px;
     height: 100vh;
+    height: 100dvh;
     background: var(--white);
     flex-direction: column;
-    padding: 6rem 2rem 2rem;
+    padding: 5rem 1.5rem 2rem;
     gap: 0;
     box-shadow: var(--shadow-xl);
-    transition: right 0.4s ease;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-links.active {
@@ -1781,7 +1820,7 @@ span.flatpickr-weekday {
   .nav-links a {
     color: var(--text) !important;
     display: block;
-    padding: 1rem 0;
+    padding: 0.875rem 0;
     font-size: 1rem;
     border-bottom: 1px solid var(--border);
   }
@@ -1797,25 +1836,84 @@ span.flatpickr-weekday {
     border-radius: var(--radius-sm) !important;
     margin-top: 1rem;
     border: none !important;
-    padding: 1rem !important;
+    padding: 0.875rem !important;
   }
 
-  .lang-switcher {
-    margin-left: auto;
-    margin-right: 3.5rem;
+  .lang-switcher-desktop {
+    display: none;
+  }
+
+  .nav-lang-mobile {
+    display: block;
+    border-bottom: none !important;
+    padding-top: 1rem !important;
+  }
+
+  .lang-switcher-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+  }
+
+  .lang-switcher-mobile .lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    opacity: 0.6;
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .lang-switcher-mobile .lang-btn.active {
+    opacity: 1;
+    background: var(--aegean-pale);
+    border-color: var(--aegean);
+  }
+
+  .lang-switcher-mobile .lang-flag {
+    font-size: 1.4rem;
+  }
+
+  .lang-switcher-mobile .lang-label {
+    display: inline;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .hero {
+    min-height: 100svh;
+    min-height: 100dvh;
   }
 
   .hero-title {
-    font-size: 2.25rem;
+    font-size: 2rem;
+  }
+
+  .hero-title-sub {
+    font-size: 0.38em;
+    margin-top: 0.4rem;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .booking-badge {
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
   }
 
   .highlights-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .highlight-card {
@@ -1833,6 +1931,7 @@ span.flatpickr-weekday {
 
   .experience-gallery {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .gallery-item.gallery-large {
@@ -1844,23 +1943,60 @@ span.flatpickr-weekday {
   .villas-row-bottom {
     grid-template-columns: 1fr;
     max-width: 100%;
+    gap: 1.5rem;
+  }
+
+  .villa-card {
+    border-radius: var(--radius-md);
+  }
+
+  .villa-slider {
+    aspect-ratio: 4/3;
   }
 
   .slider-prev,
   .slider-next {
-    opacity: 0.8;
+    opacity: 0.9;
+    width: 36px;
+    height: 36px;
+  }
+
+  .slider-counter {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
   }
 
   .review-card {
-    flex: 0 0 calc(100% - 0rem);
+    flex: 0 0 100%;
+    padding: 1.5rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .reviews-score {
+    padding: 1.25rem;
+    flex-direction: column;
+    gap: 1.25rem;
   }
 
   .info-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .info-card {
+    padding: 1.25rem;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
   }
 
   .footer-grid {
@@ -1874,48 +2010,85 @@ span.flatpickr-weekday {
   }
 
   .amenities-ribbon {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .amenities-list {
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .amenities-list span {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .pool-showcase-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .pool-image {
+    aspect-ratio: 16/9;
+  }
+
+  .pool-content {
+    padding: 2rem 1.25rem;
+  }
+
+  .pool-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-section .faq-item summary {
+    font-size: 0.95rem;
+    padding: 1rem 0;
+  }
+
+  .nearby-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .antiparos-grid {
+    gap: 1.5rem;
+  }
+
+  .video-wrapper {
+    border-radius: var(--radius-md);
   }
 
   .whatsapp-float {
     bottom: 1.25rem;
     right: 1.25rem;
+    width: 52px;
+    height: 52px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 0.875rem;
   }
 
-  .hero {
-    min-height: 100svh;
+  .section {
+    padding: 2.5rem 0;
   }
 
-  .booking-badge {
-    padding: 0.4rem 1rem 0.4rem 0.4rem;
+  .hero-title {
+    font-size: 1.75rem;
   }
 
-  .contact-form {
-    padding: 1.5rem;
-  }
-
-  .reviews-score {
-    padding: 1.25rem;
-  }
-
-  .villas-grid,
-  .villas-row-bottom {
+  .info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .amenities-list span {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.55rem;
+  }
+
+  .villa-info h3 {
+    font-size: 1rem;
   }
 }
 
@@ -2021,21 +2194,6 @@ span.flatpickr-weekday {
   background: var(--white);
   color: var(--navy);
   border-color: var(--white);
-}
-
-@media (max-width: 768px) {
-  .pool-showcase-inner {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .pool-image {
-    aspect-ratio: 16/9;
-  }
-
-  .pool-content {
-    padding: 2.5rem 1.5rem;
-  }
 }
 
 /* ============================================

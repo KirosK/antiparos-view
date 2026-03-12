@@ -21,7 +21,7 @@
       'hero.cta': 'Επικοινωνήστε μαζί μας',
       'experience.tag': 'Φιλοξενία',
       'experience.title': 'Η Anna σας υποδέχεται',
-      'experience.desc': 'Στο Antiparos View δεν θα βρείτε απρόσωπη εξυπηρέτηση. Η Anna, με τη ζεστή της φιλοξενία, φροντίζει κάθε λεπτομέρεια   από τη σπιτική τάρτα που σας περιμένει στην άφιξη, μέχρι το γεμάτο ψυγείο και το pickup από το λιμάνι. Εδώ νιώθεις σαν σπίτι σου.',
+      'experience.desc': 'Στο Antiparos View δεν θα βρείτε απρόσωπη εξυπηρέτηση. Η Anna, με τη ζεστή της φιλοξενία, φροντίζει κάθε λεπτομέρεια   από το γεμάτο ψυγείο που σας περιμένει στην άφιξη, μέχρι το pickup από το λιμάνι. Εδώ νιώθεις σαν σπίτι σου.',
       'experience.h1': 'Πανοραμική Θέα',
       'experience.p1': 'Αιγαίο, Πάρος, κανάλι   η θέα από τη βεράντα σας κόβει την ανάσα κάθε πρωί.',
       'experience.h2': 'Πισίνα με Θέα',
@@ -212,7 +212,7 @@
       'hero.cta': 'Get in touch',
       'experience.tag': 'Hospitality',
       'experience.title': 'Anna welcomes you',
-      'experience.desc': 'At Antiparos View you won\'t find impersonal service. Anna, with her warm hospitality, takes care of every detail   from the homemade tart waiting for you on arrival, to the stocked fridge and the pickup from the port. Here you feel at home.',
+      'experience.desc': 'At Antiparos View you won\'t find impersonal service. Anna, with her warm hospitality, takes care of every detail   from the stocked fridge waiting for you on arrival, to the pickup from the port. Here you feel at home.',
       'experience.h1': 'Panoramic View',
       'experience.p1': 'The Aegean Sea, Paros, the channel   the view from your terrace takes your breath away every morning.',
       'experience.h2': 'Pool with a View',
@@ -403,7 +403,7 @@
       'hero.cta': 'Contattateci',
       'experience.tag': 'Ospitalità',
       'experience.title': 'Anna vi dà il benvenuto',
-      'experience.desc': 'Ad Antiparos View non troverete un servizio impersonale. Anna, con la sua calorosa ospitalità, cura ogni dettaglio   dalla crostata fatta in casa che vi attende all\'arrivo, al frigorifero pieno e al pickup dal porto. Qui vi sentirete come a casa.',
+      'experience.desc': 'Ad Antiparos View non troverete un servizio impersonale. Anna, con la sua calorosa ospitalità, cura ogni dettaglio   dal frigorifero pieno che vi attende all\'arrivo, al pickup dal porto. Qui vi sentirete come a casa.',
       'experience.h1': 'Vista Panoramica',
       'experience.p1': 'Il Mar Egeo, Paros, il canale   la vista dalla vostra terrazza vi toglie il fiato ogni mattina.',
       'experience.h2': 'Piscina con Vista',
@@ -661,6 +661,9 @@
   document.querySelectorAll('.lang-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       setLanguage(this.getAttribute('data-lang'));
+      if (window.innerWidth <= 768) {
+        closeNav();
+      }
     });
   });
 
