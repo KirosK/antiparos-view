@@ -22,6 +22,7 @@
       'experience.tag': 'Φιλοξενία',
       'experience.title': 'Η Anna σας υποδέχεται',
       'experience.desc': 'Στο Antiparos View δεν θα βρείτε απρόσωπη εξυπηρέτηση. Η Anna, με τη ζεστή της φιλοξενία, φροντίζει κάθε λεπτομέρεια   από το γεμάτο ψυγείο που σας περιμένει στην άφιξη, μέχρι το pickup από το λιμάνι. Εδώ νιώθεις σαν σπίτι σου.',
+      'experience.links': 'Δείτε τις <a href="#villas">βίλες μας</a> ή διαβάστε τι λένε <a href="#reviews">οι επισκέπτες μας</a>.',
       'experience.h1': 'Πανοραμική Θέα',
       'experience.p1': 'Αιγαίο, Πάρος, κανάλι   η θέα από τη βεράντα σας κόβει την ανάσα κάθε πρωί.',
       'experience.h2': 'Πισίνα με Θέα',
@@ -36,6 +37,7 @@
       'villas.tag': 'Διαμονή',
       'villas.title': 'Οι Βίλες μας στην Αντίπαρο',
       'villas.desc': 'Πέντε Κυκλαδίτικες βίλες, η καθεμία με τη δική της προσωπικότητα   όλες με θέα θάλασσα, πλήρη εξοπλισμό και προσωπική φροντίδα.',
+      'villas.links': 'Δείτε <a href="#info">πληροφορίες διαμονής</a> ή <a href="#faq">συχνές ερωτήσεις</a>.',
       'villas.v1guests': 'Έως 3 άτομα',
       'villas.v2guests': 'Έως 4 άτομα',
       'villas.v3guests': 'Έως 5 άτομα',
@@ -118,6 +120,7 @@
       'antiparos.title': 'Αντίπαρος, Κυκλάδες',
       'antiparos.p1': 'Η Αντίπαρος είναι ένα μικρό νησί απέναντι από την Πάρο, γνωστό για την αυθεντική Κυκλαδίτικη ατμόσφαιρα, τις κρυστάλλινες παραλίες και την ηρεμία που δύσκολα βρίσκεις αλλού.',
       'antiparos.p2': 'Μακριά από τον συνωστισμό, η Αντίπαρος προσφέρει αυθεντικές εμπειρίες   από τη σπηλιά με τους σταλακτίτες μέχρι τις παραλίες της Σωρός και του Αγίου Γεωργίου.',
+      'antiparos.links': 'Ανακαλύψτε τις <a href="#villas">βίλες μας</a> ή <a href="#contact">επικοινωνήστε μαζί μας</a>.',
       'antiparos.distances': 'Αποστάσεις',
       'antiparos.d1': 'Λιμάνι Αντιπάρου   1 χλμ (2 λεπτά)',
       'antiparos.d2': 'Κέντρο χωριού   800μ (10 λεπτά με τα πόδια)',
@@ -148,6 +151,7 @@
       'info.cancel': 'Δωρεάν ακύρωση έως 14 ημέρες πριν την άφιξη. Επικοινωνήστε μαζί μας για λεπτομέρειες.',
       'info.tag': 'Χρήσιμα',
       'info.title': 'Πληροφορίες Διαμονής',
+      'info.links': 'Δείτε επίσης τις <a href="#faq">συχνές ερωτήσεις</a> ή <a href="#contact">ρωτήστε μας</a>.',
       'info.season_title': 'Σεζόν',
       'info.season': '1 Μαΐου   30 Σεπτεμβρίου',
       'info.checkin': 'Check-in: μετά τις 14:30<br>Check-out: μέχρι τις 12:00',
@@ -162,6 +166,7 @@
       'faq.tag': 'Συχνές Ερωτήσεις',
       'faq.title': 'Χρήσιμες Πληροφορίες',
       'faq.desc': 'Απαντήσεις στα πιο συχνά ερωτήματα των επισκεπτών μας.',
+      'faq.links': 'Δεν βρήκατε αυτό που ψάχνετε; <a href="#contact">Στείλτε μας μήνυμα</a>.',
       'faq.q1': 'Σερβίρεται πρωινό;',
       'faq.a1': 'Η Anna φροντίζει να γεμίσει το ψυγείο σας με σπιτικά κεράσματα, φρούτα και βασικά για πρωινό κατά την άφιξή σας   ένα ζεστό καλωσόρισμα που θα θυμάστε. Δεν υπάρχει οργανωμένο πρωινό, αλλά η πλήρης κουζίνα σας δίνει κάθε δυνατότητα.',
       'faq.q2': 'Μπορώ να παρκάρω εκεί;',
@@ -213,6 +218,7 @@
       'experience.tag': 'Hospitality',
       'experience.title': 'Anna welcomes you',
       'experience.desc': 'At Antiparos View you won\'t find impersonal service. Anna, with her warm hospitality, takes care of every detail   from the stocked fridge waiting for you on arrival, to the pickup from the port. Here you feel at home.',
+      'experience.links': 'See <a href="#villas">our villas</a> or read what <a href="#reviews">our guests say</a>.',
       'experience.h1': 'Panoramic View',
       'experience.p1': 'The Aegean Sea, Paros, the channel   the view from your terrace takes your breath away every morning.',
       'experience.h2': 'Pool with a View',
@@ -227,6 +233,7 @@
       'villas.tag': 'Accommodation',
       'villas.title': 'Our Villas in Antiparos',
       'villas.desc': 'Five Cycladic villas, each with its own personality   all with sea views, full amenities, and a personal touch.',
+      'villas.links': 'See <a href="#info">stay information</a> or <a href="#faq">frequently asked questions</a>.',
       'villas.v1guests': 'Up to 3 guests',
       'villas.v2guests': 'Up to 4 guests',
       'villas.v3guests': 'Up to 5 guests',
@@ -309,6 +316,7 @@
       'antiparos.title': 'Antiparos, Cyclades',
       'antiparos.p1': 'Antiparos is a small island across from Paros, known for its authentic Cycladic atmosphere, crystal-clear beaches, and a tranquility hard to find elsewhere.',
       'antiparos.p2': 'Far from the crowds, Antiparos offers authentic experiences   from the cave with its stalactites to the beaches of Soros and Agios Georgios.',
+      'antiparos.links': 'Discover <a href="#villas">our villas</a> or <a href="#contact">get in touch</a>.',
       'antiparos.distances': 'Distances',
       'antiparos.d1': 'Antiparos Port   1 km (2 minutes)',
       'antiparos.d2': 'Village center   800m (10 min walk)',
@@ -339,6 +347,7 @@
       'info.cancel': 'Free cancellation up to 14 days before arrival. Contact us for details.',
       'info.tag': 'Useful Info',
       'info.title': 'Stay Information',
+      'info.links': 'See also <a href="#faq">frequently asked questions</a> or <a href="#contact">ask us</a>.',
       'info.season_title': 'Season',
       'info.season': 'May 1   September 30',
       'info.checkin': 'Check-in: after 14:30<br>Check-out: by 12:00',
@@ -353,6 +362,7 @@
       'faq.tag': 'FAQ',
       'faq.title': 'Useful Information',
       'faq.desc': 'Answers to the most frequently asked questions from our guests.',
+      'faq.links': 'Can\'t find what you\'re looking for? <a href="#contact">Send us a message</a>.',
       'faq.q1': 'Is breakfast served?',
       'faq.a1': 'Anna makes sure your fridge is stocked with homemade treats, fruits, and breakfast essentials upon arrival   a warm welcome you\'ll remember. There is no organized breakfast service, but the fully equipped kitchen gives you every option.',
       'faq.q2': 'Can I park there?',
@@ -404,6 +414,7 @@
       'experience.tag': 'Ospitalità',
       'experience.title': 'Anna vi dà il benvenuto',
       'experience.desc': 'Ad Antiparos View non troverete un servizio impersonale. Anna, con la sua calorosa ospitalità, cura ogni dettaglio   dal frigorifero pieno che vi attende all\'arrivo, al pickup dal porto. Qui vi sentirete come a casa.',
+      'experience.links': 'Scoprite le <a href="#villas">nostre ville</a> o leggete cosa dicono <a href="#reviews">i nostri ospiti</a>.',
       'experience.h1': 'Vista Panoramica',
       'experience.p1': 'Il Mar Egeo, Paros, il canale   la vista dalla vostra terrazza vi toglie il fiato ogni mattina.',
       'experience.h2': 'Piscina con Vista',
@@ -418,6 +429,7 @@
       'villas.tag': 'Alloggio',
       'villas.title': 'Le nostre Ville ad Antiparos',
       'villas.desc': 'Cinque ville cicladiche, ognuna con la propria personalità   tutte con vista mare, servizi completi e un tocco personale.',
+      'villas.links': 'Vedete le <a href="#info">informazioni sul soggiorno</a> o le <a href="#faq">domande frequenti</a>.',
       'villas.v1guests': 'Fino a 3 ospiti',
       'villas.v2guests': 'Fino a 4 ospiti',
       'villas.v3guests': 'Fino a 5 ospiti',
@@ -500,6 +512,7 @@
       'antiparos.title': 'Antiparos, Cicladi',
       'antiparos.p1': 'Antiparos è una piccola isola di fronte a Paros, conosciuta per la sua autentica atmosfera cicladica, le spiagge cristalline e una tranquillità difficile da trovare altrove.',
       'antiparos.p2': 'Lontano dalla folla, Antiparos offre esperienze autentiche   dalla grotta con le stalattiti alle spiagge di Soros e Agios Georgios.',
+      'antiparos.links': 'Scoprite le <a href="#villas">nostre ville</a> o <a href="#contact">contattateci</a>.',
       'antiparos.distances': 'Distanze',
       'antiparos.d1': 'Porto di Antiparos   1 km (2 minuti)',
       'antiparos.d2': 'Centro paese   800m (10 min a piedi)',
@@ -530,6 +543,7 @@
       'info.cancel': 'Cancellazione gratuita fino a 14 giorni prima dell\'arrivo. Contattateci per dettagli.',
       'info.tag': 'Info Utili',
       'info.title': 'Informazioni sul Soggiorno',
+      'info.links': 'Vedete anche le <a href="#faq">domande frequenti</a> o <a href="#contact">chiedeteci</a>.',
       'info.season_title': 'Stagione',
       'info.season': '1 Maggio   30 Settembre',
       'info.checkin': 'Check-in: dopo le 14:30<br>Check-out: entro le 12:00',
@@ -544,6 +558,7 @@
       'faq.tag': 'Domande Frequenti',
       'faq.title': 'Informazioni Utili',
       'faq.desc': 'Risposte alle domande più frequenti dei nostri ospiti.',
+      'faq.links': 'Non avete trovato quello che cercate? <a href="#contact">Inviateci un messaggio</a>.',
       'faq.q1': 'La colazione è servita?',
       'faq.a1': 'Anna si assicura che il frigorifero sia pieno di dolci fatti in casa, frutta e prodotti per la colazione al vostro arrivo   un caloroso benvenuto che ricorderete. Non c\'è un servizio di colazione organizzato, ma la cucina completamente attrezzata vi offre ogni possibilità.',
       'faq.q2': 'Posso parcheggiare lì?',
@@ -599,6 +614,14 @@
         } else {
           el.textContent = text;
         }
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-html');
+      var html = translations[lang][key];
+      if (html !== undefined) {
+        el.innerHTML = html;
       }
     });
 

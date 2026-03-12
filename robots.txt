@@ -3,3 +3,6 @@ Allow: /
 Disallow: /images/gallery-*
 
 Sitemap: https://antiparosview.gr/sitemap.xml
+
+# AI / LLM
+# See https://antiparosview.gr/llms.txt for structured info

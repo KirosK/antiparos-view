@@ -104,6 +104,24 @@ h1, h2, h3, h4 {
   line-height: 1.8;
 }
 
+.section-links {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 0.75rem;
+}
+
+.section-links a {
+  color: var(--aegean);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.section-links a:hover {
+  border-bottom-color: var(--aegean);
+}
+
 .section-intro {
   text-align: center;
   margin-bottom: 3.5rem;
@@ -1610,6 +1628,7 @@ span.flatpickr-weekday {
 .footer-links {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -1619,6 +1638,19 @@ span.flatpickr-weekday {
 }
 
 .footer-links a:hover {
+  color: var(--white);
+}
+
+.footer-links-internal {
+  gap: 1.25rem;
+}
+
+.footer-links-internal a {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-links-internal a:hover {
   color: var(--white);
 }
 
