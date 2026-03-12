@@ -609,34 +609,21 @@ h1, h2, h3, h4 {
 }
 
 .villas-grid {
-  display: flex;
-  gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-bottom: 3rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--aegean-pale) transparent;
 }
 
-.villas-grid::-webkit-scrollbar {
-  height: 6px;
-}
-
-.villas-grid::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.villas-grid::-webkit-scrollbar-thumb {
-  background: var(--aegean-pale);
-  border-radius: 3px;
+.villas-row-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 66.66%;
+  margin: -0.25rem auto 3rem;
 }
 
 .villa-card {
-  flex: 0 0 340px;
-  scroll-snap-align: start;
-  min-width: 0;
   background: var(--white);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -1624,8 +1611,13 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .villa-card {
-    flex: 0 0 300px;
+  .villas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .villas-row-bottom {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .review-card {
@@ -1760,8 +1752,10 @@ h1, h2, h3, h4 {
     aspect-ratio: 16/9;
   }
 
-  .villa-card {
-    flex: 0 0 280px;
+  .villas-grid,
+  .villas-row-bottom {
+    grid-template-columns: 1fr;
+    max-width: 100%;
   }
 
   .slider-prev,
@@ -1831,8 +1825,9 @@ h1, h2, h3, h4 {
     padding: 1.25rem;
   }
 
-  .villa-card {
-    flex: 0 0 85vw;
+  .villas-grid,
+  .villas-row-bottom {
+    grid-template-columns: 1fr;
   }
 }
 
