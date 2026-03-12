@@ -1826,6 +1826,73 @@ span.flatpickr-weekday {
 }
 
 /* ============================================
+   POOL SHOWCASE
+   ============================================ */
+
+.pool-showcase {
+  background: var(--navy);
+  overflow: hidden;
+}
+
+.pool-showcase-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height: 480px;
+}
+
+.pool-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.pool-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pool-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 3.5rem;
+  color: var(--white);
+}
+
+.pool-content .section-tag {
+  color: var(--gold);
+}
+
+.pool-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.pool-content p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.pool-content .btn-primary {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  width: fit-content;
+}
+
+.pool-content .btn-primary:hover {
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--white);
+}
+
+/* ============================================
    RESPONSIVE — MOBILE
    ============================================ */
 
@@ -2065,9 +2132,13 @@ span.flatpickr-weekday {
 
   .slider-prev,
   .slider-next {
-    opacity: 0.9;
-    width: 36px;
-    height: 36px;
+    opacity: 0.85;
+    width: 34px;
+    height: 34px;
+  }
+
+  .villa-card:hover {
+    transform: none;
   }
 
   .slider-counter {
@@ -2094,8 +2165,42 @@ span.flatpickr-weekday {
   .reviews-score {
     padding: 1.25rem;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     border-radius: var(--radius-md);
+  }
+
+  .score-badges {
+    flex-direction: row;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .score-badge {
+    flex: 1;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .score-number {
+    font-size: 2.25rem;
+  }
+
+  .score-total {
+    font-size: 1rem;
+  }
+
+  .score-label {
+    font-size: 0.85rem;
+  }
+
+  .score-count {
+    font-size: 0.7rem;
+  }
+
+  .score-bars {
+    max-width: 100%;
+    width: 100%;
   }
 
   .carousel-btn {
@@ -2163,31 +2268,34 @@ span.flatpickr-weekday {
   }
 
   .pool-image {
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
   }
 
   .pool-content {
-    padding: 1.75rem 1.25rem;
+    padding: 2rem 1.25rem 2.5rem;
+    text-align: center;
+    align-items: center;
   }
 
   .pool-content .section-tag {
     font-size: 0.65rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
   }
 
   .pool-content h2 {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     margin-bottom: 0.75rem;
   }
 
   .pool-content p {
     font-size: 0.9rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+    max-width: 400px;
   }
 
   .pool-content .btn-primary {
-    padding: 0.75rem 1.5rem;
+    padding: 0.875rem 2rem;
     font-size: 0.85rem;
   }
 
@@ -2268,7 +2376,17 @@ span.flatpickr-weekday {
   }
 
   .pool-content h2 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
+  }
+
+  .score-badge {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.65rem 0.5rem;
+  }
+
+  .score-badge .score-big {
+    justify-content: center;
   }
 }
 
@@ -2309,72 +2427,7 @@ span.flatpickr-weekday {
   font-size: 0.95rem;
 }
 
-/* ============================================
-   POOL SHOWCASE
-   ============================================ */
-
-.pool-showcase {
-  background: var(--navy);
-  overflow: hidden;
-}
-
-.pool-showcase-inner {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  min-height: 480px;
-}
-
-.pool-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.pool-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.pool-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 4rem 3.5rem;
-  color: var(--white);
-}
-
-.pool-content .section-tag {
-  color: var(--gold);
-}
-
-.pool-content h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  color: var(--white);
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-.pool-content p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.pool-content .btn-primary {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
-  width: fit-content;
-}
-
-.pool-content .btn-primary:hover {
-  background: var(--white);
-  color: var(--navy);
-  border-color: var(--white);
-}
+/* Pool showcase moved before media queries */
 
 /* ============================================
    VILLA TAG SYSTEM (no emojis)
