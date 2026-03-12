@@ -54,6 +54,8 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 img {
@@ -430,6 +432,22 @@ h1, h2, h3, h4 {
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    object-position: 60% center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 36, 64, 0.35) 0%,
+      rgba(15, 36, 64, 0.15) 35%,
+      rgba(15, 36, 64, 0.45) 70%,
+      rgba(15, 36, 64, 0.7) 100%
+    );
+  }
 }
 
 .hero-overlay {
@@ -1822,6 +1840,15 @@ span.flatpickr-weekday {
     padding: 0 1rem;
   }
 
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .logo-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -1921,26 +1948,59 @@ span.flatpickr-weekday {
     min-height: 100dvh;
   }
 
+  .hero-content {
+    padding: 0 1.25rem;
+    padding-bottom: 4rem;
+  }
+
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
   }
 
   .hero-title-sub {
-    font-size: 0.38em;
-    margin-top: 0.4rem;
+    font-size: 0.34em;
+    margin-top: 0.35rem;
+    letter-spacing: 0.1em;
   }
 
   .hero-subtitle {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
   }
 
-  .hero-content {
-    padding: 0 1rem;
+  .hero-cta {
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
   }
 
   .booking-badge {
-    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    padding: 0.35rem 0.85rem 0.35rem 0.35rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .badge-score {
+    font-size: 1.1rem;
+    width: 38px;
+    height: 38px;
+  }
+
+  .badge-label {
+    font-size: 0.65rem;
+  }
+
+  .badge-sub {
+    font-size: 0.6rem;
+  }
+
+  .hero-scroll {
+    bottom: 1.25rem;
+  }
+
+  .hero-scroll svg {
+    width: 20px;
+    height: 20px;
   }
 
   .highlights-grid {
@@ -2000,18 +2060,30 @@ span.flatpickr-weekday {
 
   .review-card {
     flex: 0 0 100%;
-    padding: 1.5rem;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
   }
 
   .review-text {
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    -webkit-line-clamp: 6;
+  }
+
+  .review-header {
+    margin-bottom: 0.75rem;
   }
 
   .reviews-score {
     padding: 1.25rem;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
   }
 
   .info-grid {
@@ -2028,13 +2100,27 @@ span.flatpickr-weekday {
   }
 
   .contact-form {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  .contact-form .btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    font-size: 0.95rem;
   }
 
   .footer-grid {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .footer-links,
+  .footer-links-internal {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
   }
 
   .footer-legal {
@@ -2060,15 +2146,32 @@ span.flatpickr-weekday {
   }
 
   .pool-image {
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/10;
   }
 
   .pool-content {
-    padding: 2rem 1.25rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .pool-content .section-tag {
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
   }
 
   .pool-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pool-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .pool-content .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
   }
 
   .faq-section .faq-item summary {
@@ -2090,7 +2193,7 @@ span.flatpickr-weekday {
   }
 
   .whatsapp-float {
-    bottom: 1.25rem;
+    bottom: calc(1.25rem + env(safe-area-inset-bottom));
     right: 1.25rem;
     width: 52px;
     height: 52px;
@@ -2103,11 +2206,19 @@ span.flatpickr-weekday {
   }
 
   .section {
-    padding: 2.5rem 0;
+    padding: 2.25rem 0;
   }
 
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 1.85rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 
   .info-grid {
@@ -2121,6 +2232,26 @@ span.flatpickr-weekday {
 
   .villa-info h3 {
     font-size: 1rem;
+  }
+
+  .highlight-card {
+    padding: 1rem;
+  }
+
+  .highlight-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.85rem;
+  }
+
+  .section-links {
+    font-size: 0.82rem;
+  }
+
+  .pool-content h2 {
+    font-size: 1.25rem;
   }
 }
 
