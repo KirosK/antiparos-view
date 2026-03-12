@@ -1372,7 +1372,7 @@ h1, h2, h3, h4 {
 }
 
 .form-group label {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text);
   letter-spacing: 0.02em;
@@ -1382,8 +1382,9 @@ h1, h2, h3, h4 {
 .form-group select,
 .form-group textarea {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0.75rem 1rem;
+  min-height: 50px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--white);
@@ -1402,6 +1403,61 @@ h1, h2, h3, h4 {
 .form-group textarea {
   resize: vertical;
   min-height: 100px;
+}
+
+.form-group input[readonly] {
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.flatpickr-calendar {
+  font-family: var(--font-body) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background: var(--aegean) !important;
+  border-color: var(--aegean) !important;
+}
+
+.flatpickr-day:hover {
+  background: var(--aegean-pale) !important;
+  border-color: var(--aegean-pale) !important;
+}
+
+.flatpickr-months .flatpickr-month {
+  background: var(--navy) !important;
+  color: var(--white) !important;
+  border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month input.cur-year {
+  color: var(--white) !important;
+  font-weight: 600 !important;
+}
+
+.flatpickr-months .flatpickr-prev-month svg,
+.flatpickr-months .flatpickr-next-month svg {
+  fill: var(--white) !important;
+}
+
+span.flatpickr-weekday {
+  color: var(--aegean) !important;
+  font-weight: 600 !important;
 }
 
 .contact-sidebar {

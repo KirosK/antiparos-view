@@ -949,6 +949,52 @@
     }
   });
 
+  // ── Flatpickr date pickers ──────────────────
+  var flatpickrLocales = { el: 'gr', en: 'default', it: 'it' };
+  var checkinPicker = null;
+  var checkoutPicker = null;
+
+  function initDatePickers(lang) {
+    var locale = flatpickrLocales[lang] || 'default';
+    var fpLocale = locale === 'default' ? 'default' : (flatpickr.l10ns[locale] || 'default');
+    var placeholders = {
+      el: 'Επιλέξτε ημερομηνία',
+      en: 'Select date',
+      it: 'Seleziona data'
+    };
+
+    if (checkinPicker) checkinPicker.destroy();
+    if (checkoutPicker) checkoutPicker.destroy();
+
+    var checkinEl = document.getElementById('checkin');
+    var checkoutEl = document.getElementById('checkout');
+    if (checkinEl) checkinEl.placeholder = placeholders[lang] || placeholders.en;
+    if (checkoutEl) checkoutEl.placeholder = placeholders[lang] || placeholders.en;
+
+    checkinPicker = flatpickr('#checkin', {
+      locale: fpLocale,
+      dateFormat: 'd/m/Y',
+      minDate: 'today',
+      disableMobile: true,
+      onChange: function (selectedDates) {
+        if (selectedDates[0] && checkoutPicker) {
+          checkoutPicker.set('minDate', selectedDates[0]);
+        }
+      }
+    });
+
+    checkoutPicker = flatpickr('#checkout', {
+      locale: fpLocale,
+      dateFormat: 'd/m/Y',
+      minDate: 'today',
+      disableMobile: true
+    });
+  }
+
+  if (typeof flatpickr !== 'undefined') {
+    initDatePickers(currentLang || 'el');
+  }
+
   var origSetLanguage = setLanguage;
   setLanguage = function (lang) {
     origSetLanguage(lang);
@@ -959,6 +1005,9 @@
         el.innerHTML = svgHTML + ' ' + translations[lang][key];
       }
     });
+    if (typeof flatpickr !== 'undefined') {
+      initDatePickers(lang);
+    }
   };
 
   // ── Smooth scroll for anchor links ────────
