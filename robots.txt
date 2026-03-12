@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/gallery-*
+
+Sitemap: https://antiparosview.gr/sitemap.xml
