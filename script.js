@@ -629,6 +629,14 @@
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 
+    var metaDescs = {
+      el: 'Βίλες στην Αντίπαρο με πισίνα και πανοραμική θέα Αιγαίου. 9.6/10 Booking.com. Πλήρως εξοπλισμένες, δωρεάν parking, pickup από λιμάνι. Κρατήσεις κατόπιν επικοινωνίας.',
+      en: 'Sea view villas in Antiparos with pool, fully equipped kitchen and personal hospitality. Rated 9.6/10 on Booking.com. Free parking, WiFi, port pickup. Book directly with your host.',
+      it: 'Ville con piscina e vista panoramica sul mare ad Antiparos. 9.6/10 su Booking.com. Cucina attrezzata, parcheggio gratuito, transfer dal porto. Contattaci direttamente.'
+    };
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && metaDescs[lang]) metaDesc.setAttribute('content', metaDescs[lang]);
+
     localStorage.setItem('apv-lang', lang);
   }
 
