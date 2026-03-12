@@ -1704,7 +1704,7 @@ span.flatpickr-weekday {
 }
 
 .footer-credit {
-  text-align: center;
+  text-align: right;
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -1713,20 +1713,31 @@ span.flatpickr-weekday {
 .footer-credit a {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.35);
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: color 0.2s;
+  letter-spacing: 0.01em;
+  transition: opacity 0.2s;
 }
 
 .footer-credit a:hover {
-  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.85;
 }
 
-.footer-credit strong {
+.mss-my {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mss-stay {
   font-weight: 600;
+  color: var(--aegean);
+}
+
+.mss-site {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ============================================
