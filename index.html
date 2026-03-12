@@ -42,11 +42,15 @@
   <meta name="ICBM" content="37.0385, 25.0735">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Preload critical resources -->
+  <link rel="preload" as="image" href="images/hero-view.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -229,9 +233,10 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar" id="navbar">
+  <a href="#experience" class="skip-link">Μετάβαση στο περιεχόμενο</a>
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">
+      <a href="#hero" class="nav-logo" aria-label="Antiparos View Villas - Αρχική">
         <span class="logo-text">Antiparos View</span>
         <span class="logo-sub">Villas</span>
       </a>
@@ -263,9 +268,10 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="hero">
+  <main>
+  <section class="hero" id="hero" aria-label="Hero">
     <div class="hero-bg">
-      <img src="images/hero-view.jpg" alt="Antiparos View Villas - Πανοραμική θέα Πάρος και Αιγαίο από βίλες Αντιπάρου" class="hero-img">
+      <img src="images/hero-view.jpg" alt="Antiparos View Villas - Πανοραμική θέα Πάρος και Αιγαίο από βίλες Αντιπάρου" class="hero-img" width="1024" height="767" fetchpriority="high" decoding="async">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -289,7 +295,7 @@
   <section class="pool-showcase" id="pool">
     <div class="pool-showcase-inner">
       <div class="pool-image">
-        <img src="images/pool-view.jpg" alt="Πισίνα Antiparos View με πανοραμική θέα θάλασσα Αντίπαρος" loading="lazy">
+        <img src="images/pool-view.jpg" alt="Πισίνα Antiparos View με πανοραμική θέα θάλασσα Αντίπαρος" loading="lazy" width="1023" height="768" decoding="async">
       </div>
       <div class="pool-content">
         <span class="section-tag" data-i18n="pool.tag">Πισίνα</span>
@@ -341,15 +347,15 @@
       </div>
       <div class="experience-gallery">
         <div class="gallery-item gallery-large">
-          <img src="images/terrace-view.jpg" alt="Βεράντα βίλας με θέα θάλασσα Αντίπαρος Κυκλάδες" loading="lazy">
+          <img src="images/terrace-view.jpg" alt="Βεράντα βίλας με θέα θάλασσα Αντίπαρος Κυκλάδες" loading="lazy" width="1023" height="768" decoding="async">
           <span class="gallery-caption" data-i18n="experience.cap1">Πισίνα με πανοραμική θέα</span>
         </div>
         <div class="gallery-item">
-          <img src="images/welcome-package.jpg" alt="Σπιτικό welcome package Antiparos View Villas" loading="lazy">
+          <img src="images/welcome-package.jpg" alt="Σπιτικό welcome package Antiparos View Villas" loading="lazy" width="1024" height="768" decoding="async">
           <span class="gallery-caption" data-i18n="experience.cap2">Σπιτικό welcome package</span>
         </div>
         <div class="gallery-item">
-          <img src="images/garden.jpg" alt="Κήπος με λουλούδια και θέα Antiparos View" loading="lazy">
+          <img src="images/garden.jpg" alt="Κήπος με λουλούδια και θέα Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
           <span class="gallery-caption" data-i18n="experience.cap3">Κήπος με λουλούδια</span>
         </div>
       </div>
@@ -370,12 +376,12 @@
         <div class="villa-card" data-aos="fade-up">
           <div class="villa-slider">
             <div class="slider-track">
-              <img src="images/villa-1.jpg" alt="Βίλα Αντίπαρος - βεράντα με θέα θάλασσα" loading="lazy">
-              <img src="images/gallery-3.jpg" alt="Κουζίνα βίλας Αντίπαρος Κυκλαδίτικη" loading="lazy">
-              <img src="images/gallery-31.jpg" alt="Υπνοδωμάτιο βίλας Antiparos View" loading="lazy">
-              <img src="images/gallery-25.jpg" alt="Μπάνιο βίλας Αντίπαρος" loading="lazy">
-              <img src="images/gallery-20.jpg" alt="Βεράντα με τραπέζι βίλα Αντίπαρος" loading="lazy">
-              <img src="images/gallery-19.jpg" alt="Ντουλάπα βίλας Antiparos View" loading="lazy">
+              <img src="images/villa-1.jpg" alt="Βίλα Αντίπαρος - βεράντα με θέα θάλασσα" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-3.jpg" alt="Κουζίνα βίλας Αντίπαρος Κυκλαδίτικη" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-31.jpg" alt="Υπνοδωμάτιο βίλας Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-25.jpg" alt="Μπάνιο βίλας Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-20.jpg" alt="Βεράντα με τραπέζι βίλα Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-19.jpg" alt="Ντουλάπα βίλας Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
             </div>
             <button class="slider-prev" aria-label="Προηγούμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
             <button class="slider-next" aria-label="Επόμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
@@ -402,12 +408,12 @@
         <div class="villa-card" data-aos="fade-up" data-aos-delay="50">
           <div class="villa-slider">
             <div class="slider-track">
-              <img src="images/villa-2.jpg" alt="Ταράτσα βίλας με θέα θάλασσα Αντίπαρος" loading="lazy">
-              <img src="images/gallery-24.jpg" alt="Βεράντα βίλας θέα Αιγαίο Antiparos" loading="lazy">
-              <img src="images/gallery-29.jpg" alt="Κουζίνα βίλας Antiparos View" loading="lazy">
-              <img src="images/gallery-34.jpg" alt="Υπνοδωμάτιο βίλας Αντίπαρος Κυκλάδες" loading="lazy">
-              <img src="images/gallery-27.jpg" alt="Μπάνιο βίλας Antiparos View Villas" loading="lazy">
-              <img src="images/gallery-26.jpg" alt="Ντους βίλας Αντίπαρος" loading="lazy">
+              <img src="images/villa-2.jpg" alt="Ταράτσα βίλας με θέα θάλασσα Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-24.jpg" alt="Βεράντα βίλας θέα Αιγαίο Antiparos" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-29.jpg" alt="Κουζίνα βίλας Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-34.jpg" alt="Υπνοδωμάτιο βίλας Αντίπαρος Κυκλάδες" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-27.jpg" alt="Μπάνιο βίλας Antiparos View Villas" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-26.jpg" alt="Ντους βίλας Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
             </div>
             <button class="slider-prev" aria-label="Προηγούμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
             <button class="slider-next" aria-label="Επόμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
@@ -434,12 +440,12 @@
         <div class="villa-card" data-aos="fade-up" data-aos-delay="100">
           <div class="villa-slider">
             <div class="slider-track">
-              <img src="images/villa-5.jpg" alt="Υπνοδωμάτιο βίλας Αντίπαρος θέα θάλασσα" loading="lazy">
-              <img src="images/gallery-41.jpg" alt="Κουζίνα βίλας Αντίπαρος" loading="lazy">
-              <img src="images/gallery-55.jpg" alt="Δωμάτιο με TV Antiparos View" loading="lazy">
-              <img src="images/gallery-71.jpg" alt="Δεύτερο υπνοδωμάτιο βίλας Αντίπαρος" loading="lazy">
-              <img src="images/gallery-69.jpg" alt="Μπάνιο βίλας Αντίπαρος Κυκλάδες" loading="lazy">
-              <img src="images/gallery-40.jpg" alt="Δωμάτιο με μπαλκόνι Antiparos View" loading="lazy">
+              <img src="images/villa-5.jpg" alt="Υπνοδωμάτιο βίλας Αντίπαρος θέα θάλασσα" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-41.jpg" alt="Κουζίνα βίλας Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-55.jpg" alt="Δωμάτιο με TV Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-71.jpg" alt="Δεύτερο υπνοδωμάτιο βίλας Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-69.jpg" alt="Μπάνιο βίλας Αντίπαρος Κυκλάδες" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-40.jpg" alt="Δωμάτιο με μπαλκόνι Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
             </div>
             <button class="slider-prev" aria-label="Προηγούμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
             <button class="slider-next" aria-label="Επόμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
@@ -468,13 +474,13 @@
         <div class="villa-card" data-aos="fade-up" data-aos-delay="150">
           <div class="villa-slider">
             <div class="slider-track">
-              <img src="images/villa-3.jpg" alt="Βεράντα οικογενειακής βίλας Αντίπαρος θέα" loading="lazy">
-              <img src="images/gallery-37.jpg" alt="Πανοραμική βεράντα βίλας Antiparos" loading="lazy">
-              <img src="images/gallery-22.jpg" alt="Πλήρης κουζίνα βίλας Αντίπαρος" loading="lazy">
-              <img src="images/gallery-28.jpg" alt="Καθιστικό βίλας Antiparos View" loading="lazy">
-              <img src="images/gallery-33.jpg" alt="Εξωτερικός χώρος βίλας Αντίπαρος Κυκλάδες" loading="lazy">
-              <img src="images/gallery-32.jpg" alt="Μπάνιο Κυκλαδίτικης βίλας Antiparos" loading="lazy">
-              <img src="images/gallery-35.jpg" alt="Ντους βίλας Antiparos View" loading="lazy">
+              <img src="images/villa-3.jpg" alt="Βεράντα οικογενειακής βίλας Αντίπαρος θέα" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-37.jpg" alt="Πανοραμική βεράντα βίλας Antiparos" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-22.jpg" alt="Πλήρης κουζίνα βίλας Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-28.jpg" alt="Καθιστικό βίλας Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-33.jpg" alt="Εξωτερικός χώρος βίλας Αντίπαρος Κυκλάδες" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-32.jpg" alt="Μπάνιο Κυκλαδίτικης βίλας Antiparos" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-35.jpg" alt="Ντους βίλας Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
             </div>
             <button class="slider-prev" aria-label="Προηγούμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
             <button class="slider-next" aria-label="Επόμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
@@ -501,14 +507,14 @@
         <div class="villa-card villa-card-featured" data-aos="fade-up" data-aos-delay="200">
           <div class="villa-slider">
             <div class="slider-track">
-              <img src="images/villa-4.jpg" alt="Σαλόνι μεζονέτας Αντίπαρος θέα θάλασσα" loading="lazy">
-              <img src="images/gallery-76.jpg" alt="Τραπεζαρία μεζονέτας Antiparos View" loading="lazy">
-              <img src="images/gallery-75.jpg" alt="Καθιστικό μεζονέτας Αντίπαρος" loading="lazy">
-              <img src="images/gallery-77.jpg" alt="Κύριο υπνοδωμάτιο μεζονέτας Antiparos" loading="lazy">
-              <img src="images/gallery-73.jpg" alt="Υπνοδωμάτιο μεζονέτας Αντίπαρος Κυκλάδες" loading="lazy">
-              <img src="images/gallery-70.jpg" alt="Δωμάτιο μεζονέτας Antiparos View Villas" loading="lazy">
-              <img src="images/gallery-68.jpg" alt="Μπάνιο μεζονέτας Αντίπαρος" loading="lazy">
-              <img src="images/gallery-38.jpg" alt="Βεράντα μεζονέτας θέα Αιγαίο Antiparos" loading="lazy">
+              <img src="images/villa-4.jpg" alt="Σαλόνι μεζονέτας Αντίπαρος θέα θάλασσα" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-76.jpg" alt="Τραπεζαρία μεζονέτας Antiparos View" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-75.jpg" alt="Καθιστικό μεζονέτας Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-77.jpg" alt="Κύριο υπνοδωμάτιο μεζονέτας Antiparos" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-73.jpg" alt="Υπνοδωμάτιο μεζονέτας Αντίπαρος Κυκλάδες" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-70.jpg" alt="Δωμάτιο μεζονέτας Antiparos View Villas" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-68.jpg" alt="Μπάνιο μεζονέτας Αντίπαρος" loading="lazy" width="1024" height="768" decoding="async">
+              <img src="images/gallery-38.jpg" alt="Βεράντα μεζονέτας θέα Αιγαίο Antiparos" loading="lazy" width="1024" height="768" decoding="async">
             </div>
             <button class="slider-prev" aria-label="Προηγούμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
             <button class="slider-next" aria-label="Επόμενη"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
@@ -599,7 +605,7 @@
           </div>
         </div>
       </div>
-      <div class="reviews-carousel" id="reviewsCarousel">
+      <div class="reviews-carousel" id="reviewsCarousel" role="region" aria-label="Κριτικές επισκεπτών">
         <div class="reviews-track">
           <!-- Tyack - South Africa -->
           <div class="review-card">
@@ -676,7 +682,7 @@
               </div>
               <span class="review-score">10/10</span>
             </div>
-            <p class="review-text" data-i18n="reviews.r6">"Le confort, la propreté, la décoration et les attentions de la propriétaire ont été très appréciés ! La super piscine, la vue sont incroyables et à 5 minutes du port d'Antiparos."</p>
+            <p class="review-text" data-i18n="reviews.r6" lang="fr">"Le confort, la propreté, la décoration et les attentions de la propriétaire ont été très appréciés ! La super piscine, la vue sont incroyables et à 5 minutes du port d'Antiparos."</p>
             <span class="review-source review-source-booking"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#003580"/><text x="12" y="17" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">B</text></svg> Booking.com</span>
           </div>
           <!-- Simone - Germany -->
@@ -689,7 +695,7 @@
               </div>
               <span class="review-score">10/10</span>
             </div>
-            <p class="review-text" data-i18n="reviews.r7">"Tolle Lage, grosse Terasse mit Tisch und Stühlen, Liegen und einem wunderschönen Ausblick. Die Wohnung ist sehr gut ausgestattet, viele kleine Aufmerksamkeiten der Gastgeberin und super bequemes Bett."</p>
+            <p class="review-text" data-i18n="reviews.r7" lang="de">"Tolle Lage, grosse Terasse mit Tisch und Stühlen, Liegen und einem wunderschönen Ausblick. Die Wohnung ist sehr gut ausgestattet, viele kleine Aufmerksamkeiten der Gastgeberin und super bequemes Bett."</p>
             <span class="review-source review-source-booking"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#003580"/><text x="12" y="17" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">B</text></svg> Booking.com</span>
           </div>
           <!-- Nigel - UK -->
@@ -871,7 +877,7 @@
           <source src="images/antiparos-view-highlight.mov" type="video/quicktime">
         </video>
         <div class="video-placeholder" id="videoPlaceholder">
-          <img src="images/video-thumb.jpg" alt="Video βίλες Αντίπαρος - Antiparos View Villas θέα θάλασσα πισίνα" loading="lazy">
+          <img src="images/video-thumb.jpg" alt="Video βίλες Αντίπαρος - Antiparos View Villas θέα θάλασσα πισίνα" loading="lazy" width="1024" height="767" decoding="async">
           <button class="video-play-btn" aria-label="Play video">
             <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(26,58,92,0.7)"/><polygon points="10,8 16,12 10,16" fill="#fff"/></svg>
           </button>
@@ -1127,6 +1133,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -1187,9 +1195,9 @@
     </div>
   </noscript>
 
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/gr.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js"></script>
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/gr.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
