@@ -1421,9 +1421,26 @@ h1, h2, h3, h4 {
 
 .flatpickr-calendar {
   font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  width: 280px !important;
   border-radius: var(--radius-md) !important;
   box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
   border: 1px solid var(--border) !important;
+}
+
+.flatpickr-day {
+  width: 34px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+}
+
+.flatpickr-months {
+  height: 36px !important;
+}
+
+.flatpickr-current-month {
+  font-size: 0.9rem !important;
+  padding-top: 4px !important;
 }
 
 .flatpickr-day.selected,
