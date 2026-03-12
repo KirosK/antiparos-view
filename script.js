@@ -893,27 +893,32 @@
     });
   });
 
-  // ── Villa gallery thumbnails ──────────────────
-  document.querySelectorAll('.villa-gallery').forEach(function (gallery) {
-    var mainContainer = gallery.querySelector('.gallery-main');
-    var thumbs = gallery.querySelectorAll('.gallery-thumb');
-    thumbs.forEach(function (thumb) {
-      thumb.addEventListener('click', function () {
-        var currentActive = mainContainer.querySelector('.gallery-active');
-        if (currentActive) currentActive.classList.remove('gallery-active');
-        gallery.querySelector('.gallery-thumb.active').classList.remove('active');
-        thumb.classList.add('active');
-        var newImg = mainContainer.querySelector('img[src="' + thumb.src + '"]');
-        if (!newImg) {
-          newImg = document.createElement('img');
-          newImg.src = thumb.src;
-          newImg.alt = thumb.alt;
-          newImg.loading = 'lazy';
-          mainContainer.appendChild(newImg);
-          void newImg.offsetWidth;
-        }
-        newImg.classList.add('gallery-active');
-      });
+  // ── Villa image sliders ──────────────────
+  document.querySelectorAll('.villa-slider').forEach(function (slider) {
+    var track = slider.querySelector('.slider-track');
+    var images = track.querySelectorAll('img');
+    var prevBtn = slider.querySelector('.slider-prev');
+    var nextBtn = slider.querySelector('.slider-next');
+    var counterCurrent = slider.querySelector('.slider-current');
+    var total = images.length;
+    var current = 0;
+
+    function goTo(idx) {
+      if (idx < 0) idx = total - 1;
+      if (idx >= total) idx = 0;
+      current = idx;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      counterCurrent.textContent = current + 1;
+    }
+
+    prevBtn.addEventListener('click', function (e) { e.stopPropagation(); goTo(current - 1); });
+    nextBtn.addEventListener('click', function (e) { e.stopPropagation(); goTo(current + 1); });
+
+    var startX = 0;
+    slider.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
     });
   });
 
