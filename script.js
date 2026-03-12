@@ -893,6 +893,30 @@
     });
   });
 
+  // ── Villa gallery thumbnails ──────────────────
+  document.querySelectorAll('.villa-gallery').forEach(function (gallery) {
+    var mainContainer = gallery.querySelector('.gallery-main');
+    var thumbs = gallery.querySelectorAll('.gallery-thumb');
+    thumbs.forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        var currentActive = mainContainer.querySelector('.gallery-active');
+        if (currentActive) currentActive.classList.remove('gallery-active');
+        gallery.querySelector('.gallery-thumb.active').classList.remove('active');
+        thumb.classList.add('active');
+        var newImg = mainContainer.querySelector('img[src="' + thumb.src + '"]');
+        if (!newImg) {
+          newImg = document.createElement('img');
+          newImg.src = thumb.src;
+          newImg.alt = thumb.alt;
+          newImg.loading = 'lazy';
+          mainContainer.appendChild(newImg);
+          void newImg.offsetWidth;
+        }
+        newImg.classList.add('gallery-active');
+      });
+    });
+  });
+
   // ── Video placeholder ──────────────────────
 
   var videoPlaceholder = document.getElementById('videoPlaceholder');
